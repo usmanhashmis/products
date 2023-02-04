@@ -34,12 +34,12 @@ function Addproduct() {
     e.preventDefault();
     if(id){
       axios.put(`http://localhost:420/api/products/${id}`,data).then((res)=>{
-          navigate("/")
+          navigate("/homepage")
            //console.log(res.data);
         });
     }
     else{
-      axios.post("http://localhost:420/api/products/", data).then(navigate("/"));
+      axios.post("http://localhost:420/api/products/", data).then(navigate("/homepage"));
     }
   }
   return (
